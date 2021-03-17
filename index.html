@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+</body>
+<!-- <script src="dquery.js"></script> -->
+<!-- <script src="jquery1.12.4.js"></script> -->
+<script>
+    //1.传入 空 null undefined NaN 0 false 返回空的jQuery对象
+    //  console.log($(""));
+    //  console.log($(null))
+    //  console.log($(undefined))
+    //  console.log($(NaN))
+    //  console.log($(0))
+    //  console.log($(false))
+
+    //传入方法
+    // var test = function(){};
+    // $(test);
+    //2.传入字符串
+
+    //2.1传入代码片段 会将创建好的dom元素存储到jQuery对象中返回
+    // console.log($("<p>1</p><p>2</p><p>3</p>"))
+    // console.log($("   <p>1</p> <p>2</p><p>3</p>  "))
+
+    //2.2传入选择器  会找到所有的元素存储到jQuery对象中返回
+    // console.log($('p'))
+
+    //3.传入数组
+
+    //3.1传入真数组
+    // console.log($([1,2,3,4,5]))
+    //3.2传入伪数组
+    // var likearr = {0:"a",1:"b",2:"c",length:3};
+    // console.log($(likearr));
+
+    //4.其他类型
+    //4.1 传入对象  将传入的对象存储到jQuery中保存
+    // function Person(){};
+    // console.log($(new Person()));
+    //4.2传入dom元素  将传入的dom元素存储到jQuery中保存
+    // console.log($(document.createElement('div')));
+    //4.3传入基本数据类型  将传入的基本数据类型存储到jQuery中保存
+    // console.log($(123));
+    // console.log($(true));
+    
+    //传入函数，监听dom加载
+    // $(function(){
+    //     var res = document.querySelectorAll("div");
+    //     console.log(res);
+    // })
+    
+</script>
+</html>

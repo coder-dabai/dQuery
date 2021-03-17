@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test1"></div>
+    <div class="test2"></div>
+    <div class="test3"></div>
+</body>
+<script src="dquery.js"></script>
+<!-- <script src="jquery1.12.4.js"></script> -->
+<script>
+    // var res = $("div");
+    // //get()方法：
+    // console.log(res);
+    // console.log(res.get());   //无参数 默认调用toArray
+    // console.log(res.get(1));
+    // console.log(res.get(-1));
+    // //eq()方法：
+    // console.log(res.eq());
+    // console.log(res.eq(0));
+    // console.log(res.eq(-1));
+    // //first() last()方法：
+    // console.log(res.first());
+    // console.log(res.last());
+
+    // //each()方法：   静态方法
+    // var arr=[1,2,3,4];
+    // var obj1 = {0:"1",1:"2",2:"3"};
+    // var obj2 = {"name":"g","age":"18"};
+    // $.each(arr,function(key,value){
+    //     if(key === 2){
+    //         return false;
+    //     }
+    //      console.log(key,value);
+    //     console.log(this)
+    // })
+    //原型上的each方法   实例方法
+    // $(arr).each(function(key,value){
+    //      console.log(key,value)
+    // })
+    
+    //map方法
+    var arr=[1,2,3,4];
+    var obj1 = {0:"1",1:"2",2:"3"};
+    var obj2 = {"name":"g","age":"18"};
+    
+    var res = $.map(obj2,function(value,key){   //map方法，value在前
+        //console.log(value,key);
+        return value;
+        //return value;
+    })
+    console.log(res);
+    // var Person = function(){
+    //     console.log("111");
+    //     var d = "d";
+    //     return new Person.prototype.name(d);
+        
+    // }
+    // Person.prototype={
+    //     constructor:Person,
+    //     name:function(d){
+    //         console.log(d)
+    //     }
+    // }
+    // //var person = new Person;
+    // Person.prototype.name.prototype = Person.prototype;
+    // Person().name("g");
+</script>
+</html>

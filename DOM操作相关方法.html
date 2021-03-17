@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button>调用empty</button>
+    <div >div1</div>
+    <div class="box">div2 <p class="box">p标签1</p> </div>
+    <p class="box">p标签2</p>
+    <div>div3</div> -->
+
+    <button>调用appendTo</button>
+    <p>我是段落</p>
+    
+    <div class="item0">
+        <li>段落一</li>
+        <li>段落二</li>
+        <li>段落三</li>
+    </div>
+    <div class="item">
+        <li>段落一</li>
+        <li>段落二</li>
+        <li>段落三</li>
+    </div>
+</body>
+<script src="dquery.js"></script>
+<script>
+    var btn = document.getElementsByTagName("button")[0];
+    btn.onclick = function(){
+        //$("div").empty();
+        
+        //remove方法：
+        //$("div").remove();
+        //$("div").remove(".box");
+        //console.log($("div").remove());
+
+        //html方法：
+        //不传参返回第一个找到的元素：
+        //console.log($("div").html());  
+        //传参：
+        //$("div").html("<div><span>我是span</span></div>");
+
+        // //text方法：
+        // //无参数：
+        // console.log($("div").text());
+        // //传参：
+        // $("div").text("666")
+
+        //appendTo方法：
+        //如果指定元素有多个，会将元素拷贝多份添加到指定元素中
+        //接收一个字符串
+        //$("p").appendTo(".item");
+        //接收一个jQuery对象，会将元素添加到jQuery对象保存的所有指定元素中
+        //$("p").appendTo($("div"));
+        //接收一个DOM元素，会将元素添加到所有指定DOM元素中
+        //var divs = document.querySelectorAll("div");
+        //$("p").appendTo(divs);
+        //以jQuery对象形式输出前面元素
+        //console.log($("p").appendTo(".item"));
+
+        //prependTo方法：
+        //$("p").prependTo(".item")
+
+        //append方法：
+        //注意调用顺序与appendTo相反
+        //接收一个字符串：
+        //$(".item").append("p");   //添加字符到第一个指定元素的最后
+        //$(".item").append("<span>我是span</span>");    //添加生成的dom元素
+        //接收一个jQuery对象：将找到的所有元素append
+        //$("div").append($("p"));
+        //接收一个DOM元素
+        //var divs = document.querySelectorAll("div");
+        // var ps = document.querySelectorAll("p");
+        // $(divs).append(ps);
+
+        //insertBefore方法：
+        //$("p").insertBefore(".item");
+
+        //replaceAll方法：
+        $("p").replaceAll("li");
+    }
+</script>
+</html>

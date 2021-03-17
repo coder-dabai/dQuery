@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <button class="btn0">点击1</button>
+    <button class="btn1">点击2</button>
+    <span class="dddd" name="666">span1</span>
+    <span class="gg" name="777">span2</span>
+
+    <div class="aa bb"></div>
+    <div class="aa"></div>
+
+    <input type="text" value="默认值">
+</body>
+<script src="dquery.js"></script>
+<script>
+var btn = document.getElementsByTagName("button")[0];
+btn.onclick = function(){
+    //attr方法：
+    //console.log($("span").attr("id","a"));  //两个参数
+    //console.log($("span").attr("class"));      //一个参数
+    // $("span").attr({                           //对象
+    //     "class":"123",
+    //     "name":"666"
+    // });
+
+    //prop方法：
+    //console.log($("span").prop("class","dgg"))
+
+    //css:
+    //console.log($("div").css("height",'100px'));
+
+    //val：
+    //console.log($("input").val("新设的"))
+
+    //addClass:会返回this方便链式编程，如果已有指定类就不添加
+    //console.log($("div").addClass("abc"))
+    
+
+    //removeClass:
+    //console.log($("div").removeClass("aa"))
+
+    //toggleClass:
+    //console.log($("div").toggleClass("bb"))
+    //console.log($("div").toggleClass())
+
+    
+    
+}
+    //on:
+    //  $(".btn0").on("click",function(){
+    //      alert("click1");
+    //  })
+    // $("button").on("click",function(){
+    //     alert("click2");
+    // })
+
+    //off:
+    //1.不传参，会移出所有事件
+    //$("button").off();
+    //2.传递一个参数，会移除对应类型所有事件
+    //$("button").off("click");
+    //3.传递两个参数,会移除对应类型对应事件
+    //$("button").off("click",test1);
+
+    //clone：
+    //  $btn1 = $(".btn0").clone(true);
+    //  console.log($btn1);
+    //  $(".bb").append($btn1)
+</script>
+</html>
